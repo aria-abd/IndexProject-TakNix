@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/css/Main.css" />
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
+    <title>TakNix</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="relative w-full text-white">
+      <!-- Nav -->
+      <nav
+        class="absolute right-1/2 top-11 flex translate-x-1/2 items-center justify-between mobile:hidden desktop:flex desktop:w-4/5"
+      >
+        <div class="flex flex-row items-end justify-center gap-x-11">
+          <div class="logo">
+            <a href="./index.html"
+              ><img src="./dist/svg/logo.svg" alt="logo"
+            /></a>
+          </div>
+          <div class="navlink flex flex-row justify-start gap-x-8 font-yb_r">
+            <a href="#">صفحه اصلی</a>
+            <a href="#">اخبار و مقالات</a>
+            <a href="#">آموزش</a>
+            <a href="#">گالری تصاویر</a>
+            <a href="#">سوالات متداول</a>
+            <a href="#">درباره ما</a>
+          </div>
+        </div>
+        <div class="button">
+          <a
+            href="#"
+            class="rounded-full bg-white px-6 py-2 font-yb_r font-bold text-black"
+            >تماس بگیرید</a
+          >
+        </div>
+      </nav>
+      <!-- nav! -->
+
+      <!-- Sidenavbar -->
+      <section
+        class="side_navbar absolute z-50 flex flex-row items-center justify-between pt-4 mobile:w-full mobile:flex desktop:hidden"
+      >
+        <div class="menu">
+          <button
+            class="mr-1.5 box-content inline-block rounded text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            type="button"
+            data-te-offcanvas-toggle
+            data-te-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-14 w-14"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+          <div
+            class="invisible fixed bottom-0 right-0 top-0 z-[1045] flex h-screen w-96 max-w-full translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+            data-te-offcanvas-init
+          >
+            <div class="flex items-start justify-between bg-white p-4">
+              <div
+                class="navlink mt-6 flex flex-col items-start justify-start gap-y-8 font-yb_r"
+                id="offcanvasRightLabel"
+              >
+                <a href="#" class="font-yb_r">صفحه اصلی</a>
+                <a href="#">اخبار و مقالات</a>
+                <a href="#">آموزش</a>
+                <a href="#">گالری تصاویر</a>
+                <a href="#">سوالات متداول</a>
+                <a href="#">درباره ما</a>
+                <a href="#">تماس بگیرید</a>
+              </div>
+              <button
+                type="button"
+                class="box-content rounded-none border-none opacity-50 hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                data-te-offcanvas-dismiss
+              >
+                <span
+                  class="w-[1em] focus:opacity-100 disabled:pointer-events-none disabled:select-none disabled:opacity-25 [&.disabled]:pointer-events-none [&.disabled]:select-none [&.disabled]:opacity-25"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="logo">
+          <a href="./index.html"
+            ><img src="./dist/svg/logo.svg" alt="logo"
+          /></a>
+        </div>
+      </section>
+      <!-- Sidenavbar! -->
+
+      <!-- Header Background -->
+      <section
+        class="header_bg flex w-full justify-between bg-[url('../images/bg1.png')] bg-[length:100%_100%] bg-no-repeat mobile:h-[700px] desktop:h-[912px]"
+      >
+        <div
+          class="description relative flex h-[347px] flex-col justify-start gap-y-8 mobile:right-3 mobile:top-[160px] mobile:w-[96%] mobile:items-center mobile:text-center desktop:right-[117px] desktop:top-[236px] desktop:w-[738px] desktop:items-start desktop:text-right"
+        >
+          <h2
+            class="font-yb_b drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] mobile:text-[38px] tablet:text-[48px]"
+          >
+            لورم ایپسوم متن ساختگی با سادگی نامفهوم
+          </h2>
+          <p
+            class="font-yb_r leading-[50px] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] tablet:text-[20px]"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است
+          </p>
+          <a
+            href="#"
+            class="w-auto rounded-full bg-[#03EEFF] px-8 py-2 font-yb_b text-[18px]"
+            >بیشتر بخوانید</a
+          >
+        </div>
+        <figure class="mobile:hidden desktop:block">
+          <img
+            class="h-[960px] object-cover"
+            src="./dist/svg/Asset1.svg"
+            alt="background-image"
+          />
+        </figure>
+      </section>
+      <!-- Header Background -->
+    </header>
+    <!-- Header! -->
+
+    <!-- Main -->
+    <main class="w-full">
+      <!-- Decorator -->
+      <div class="decorator absolute right-0 top-[740px] -z-20">
+        <img src="./dist/images/decorator1.png" alt="decorator" />
+      </div>
+      <!-- Decorator! -->
+
+      <!-- About Us -->
+      <section
+        class="about_us z-30 mx-auto flex justify-between mobile:my-12 mobile:w-[96%] mobile:flex-col mobile:items-center mobile:gap-y-16 tablet:my-20 desktop:w-4/5 desktop:flex-row"
+      >
+        <div
+          class="description flex flex-col gap-y-7 mobile:items-center desktop:w-[586px] desktop:items-start"
+        >
+          <h2
+            class="font-yb_b text-[#000F37] mobile:text-[38px] desktop:text-[48px]"
+          >
+            درباره ما
+          </h2>
+          <p
+            class="font-yb_r leading-[50px] text-[#575757] mobile:text-center tablet:text-[20px] desktop:text-right"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
+          </p>
+          <a
+            href="#"
+            class="w-auto rounded-full bg-[#000F37] px-8 py-2 font-yb_b text-lg text-white"
+            >بیشتر بخوانید</a
+          >
+        </div>
+        <figure
+          class="relative mobile:hidden tablet:block tablet:w-[400px] desktop:w-[543px]"
+        >
+          <img class="w-full" src="./dist/images/MaskGroup.png" alt="" />
+          <img
+            class="absolute tablet:-right-[100px] tablet:top-0 tablet:w-[240px] desktop:-right-[220px] desktop:-top-12 desktop:w-[378px]"
+            src="./dist/images/comment.png"
+            alt=""
+          />
+        </figure>
+      </section>
+      <!-- About Us! -->
+
+      <!-- Decorator -->
+      <div class="decorator_2 absolute left-0 top-[1500px] -z-20">
+        <img src="./dist/images/decorator2.png" alt="decorator" />
+      </div>
+      <!-- Decorator! -->
+
+      <!-- Our Customers -->
+      <section
+        class="our_customers mx-auto flex flex-col items-center justify-center mobile:mt-20 mobile:w-[96%] mobile:gap-y-10 tablet:my-0 tablet:gap-y-[60px] desktop:w-4/5"
+      >
+        <h2
+          class="font-yb_b text-[#000F37] mobile:text-[38px] desktop:text-[48px]"
+        >
+          مشتریان ما
+        </h2>
+        <div class="brands">
+          <ul
+            class="flex flex-row-reverse items-center gap-y-8 mobile:flex-wrap mobile:justify-center mobile:gap-x-8 tablet:flex-nowrap tablet:justify-between desktop:gap-x-[90px]"
+          >
+            <li>
+              <a href="https://www.precor.com/" target="_blank"
+                ><img src="./dist/svg/brand1.svg" alt="brand"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.google.com/" target="_blank"
+                ><img src="./dist/svg/brand2.svg" alt="brand"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.airbnb.com/" target="_blank"
+                ><img src="./dist/svg/brand3.svg" alt="brand"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.ubereats.com/" target="_blank"
+                ><img src="./dist/svg/brand4.svg" alt="brand"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.amazon.com/" target="_blank"
+                ><img src="./dist/svg/brand5.svg" alt="brand"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Our Customers! -->
+
+      <!-- News -->
+      <section
+        class="news relative mx-auto w-full bg-[url('../images/bg2.png')] bg-[length:100%_100%] bg-no-repeat mobile:my-10 mobile:h-auto mobile:py-[160px] tablet:my-20 tablet:h-[1136px] tablet:py-[116px]"
+      >
+        <div
+          class="details mx-auto flex flex-col items-center justify-center gap-y-[50px] mobile:w-[96%] desktop:w-4/5"
+        >
+          <h2
+            class="font-yb_b text-white mobile:text-[38px] desktop:text-[48px]"
+          >
+            اخبار و مقالات
+          </h2>
+          <p
+            class="w-full text-center font-yb_r leading-[43px] text-white [word-spacing:2px;] tablet:text-[20px]"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است و برای شرایط فعلی می باشد.
+          </p>
+          <div class="swiper slider h-[570px]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="w-full">
+                  <img
+                    class="w-full object-cover"
+                    src="./dist/images/slider1.png"
+                    alt="slider"
+                  />
+                </figure>
+                <figcaption
+                  class="text-right font-yb_r font-bold text-black [word-spacing:4px]"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </figcaption>
+                <a href="#">
+                  <span class="text-right font-yb_b text-lg text-[#4883FF]"
+                    >بیشتر بخوانید</span
+                  >
+                  <img
+                    class="mr-1 inline-block h-[15px] w-4"
+                    src="./dist/svg/left-arrow.svg"
+                    alt="vector"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <figure class="w-full">
+                  <img
+                    class="w-full object-cover"
+                    src="./dist/images/slider2.png"
+                    alt="slider"
+                  />
+                </figure>
+                <figcaption
+                  class="text-right font-yb_r font-bold text-black [word-spacing:4px]"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </figcaption>
+                <a href="#">
+                  <span class="text-right font-yb_b text-lg text-[#4883FF]"
+                    >بیشتر بخوانید</span
+                  >
+                  <img
+                    class="mr-1 inline-block h-[15px] w-4"
+                    src="./dist/svg/left-arrow.svg"
+                    alt="vector"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <figure class="w-full">
+                  <img
+                    class="w-full object-cover"
+                    src="./dist/images/slider3.png"
+                    alt="slider"
+                  />
+                </figure>
+                <figcaption
+                  class="text-right font-yb_r font-bold text-black [word-spacing:4px]"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </figcaption>
+                <a href="#">
+                  <span class="text-right font-yb_b text-lg text-[#4883FF]"
+                    >بیشتر بخوانید</span
+                  >
+                  <img
+                    class="mr-1 inline-block h-[15px] w-4"
+                    src="./dist/svg/left-arrow.svg"
+                    alt="vector"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <figure class="w-full">
+                  <img
+                    class="w-full object-cover"
+                    src="./dist/images/slider1.png"
+                    alt="slider"
+                  />
+                </figure>
+                <figcaption
+                  class="text-right font-yb_r font-bold text-black [word-spacing:4px]"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </figcaption>
+                <a href="#">
+                  <span class="text-right font-yb_b text-lg text-[#4883FF]"
+                    >بیشتر بخوانید</span
+                  >
+                  <img
+                    class="mr-1 inline-block h-[15px] w-4"
+                    src="./dist/svg/left-arrow.svg"
+                    alt="vector"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <figure class="w-full">
+                  <img
+                    class="w-full object-cover"
+                    src="./dist/images/slider2.png"
+                    alt="slider"
+                  />
+                </figure>
+                <figcaption
+                  class="text-right font-yb_r font-bold text-black [word-spacing:4px]"
+                >
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است
+                </figcaption>
+                <a href="#">
+                  <span class="text-right font-yb_b text-lg text-[#4883FF]"
+                    >بیشتر بخوانید</span
+                  >
+                  <img
+                    class="mr-1 inline-block h-[15px] w-4"
+                    src="./dist/svg/left-arrow.svg"
+                    alt="vector"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-pagination mobile:!-translate-y-[120px] desktop:!-translate-y-[140px]"
+          ></div>
+        </div>
+      </section>
+      <!-- News! -->
+
+      <!-- Services -->
+      <section
+        class="services mx-auto flex flex-col items-center justify-start mobile:w-[96%] desktop:w-[70%]"
+      >
+        <h2
+          class="font-yb_b text-[#000F37] mobile:text-[38px] desktop:text-[48px]"
+        >
+          خدمات
+        </h2>
+        <p
+          class="text-center font-yb_r font-bold leading-[43px] text-[#515151] [word-spacing:4px;] tablet:text-xl"
+        >
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+          سطرآنچنان که لازم است .
+        </p>
+        <div
+          class="service-container mt-14 flex flex-row items-stretch justify-between mobile:flex-wrap mobile:gap-x-2 tablet:flex-nowrap desktop:gap-x-9"
+        >
+          <div
+            class="service flex flex-col items-center justify-center gap-y-20 rounded-[32px] border-[2px_solid_#F2F2F2] px-4 py-[70px] shadow-[0px_10px_50px_#0000000D]"
+          >
+            <img src="./dist/svg/service3.svg" alt="service" />
+            <p
+              class="text-center font-yb_r text-lg text-[#515151] [word-spacing:2px]"
+            >
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است.
+            </p>
+          </div>
+          <div
+            class="service flex flex-col items-center justify-center gap-y-20 rounded-[32px] border-[2px_solid_#F2F2F2] px-4 py-[70px] shadow-[0px_10px_50px_#0000000D]"
+          >
+            <img src="./dist/svg/service2.svg" alt="service" />
+            <p
+              class="text-center font-yb_r text-lg text-[#515151] [word-spacing:2px]"
+            >
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است.
+            </p>
+          </div>
+          <div
+            class="service flex flex-col items-center justify-center gap-y-20 rounded-[32px] border-[2px_solid_#F2F2F2] px-4 py-[70px] shadow-[0px_10px_50px_#0000000D]"
+          >
+            <img src="./dist/svg/service1.svg" alt="service" />
+            <p
+              class="text-center font-yb_r text-lg text-[#515151] [word-spacing:2px]"
+            >
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Services! -->
+
+      <!-- Tutorials  -->
+      <section
+        class="tutorials mx-auto my-[116px] rounded-[56px] bg-[#ecedf23f] mobile:w-full mobile:p-[40px] tablet:w-[96%] tablet:p-[60px] desktop:w-4/5"
+      >
+        <div class="content flex w-full flex-col items-center justify-between">
+          <h2
+            class="font-yb_b text-[#000F37] mobile:text-[38px] desktop:text-[48px]"
+          >
+            جدیدترین آموزش ها
+          </h2>
+          <p
+            class="text-center font-yb_r font-bold leading-[43px] text-[#738089] [word-spacing:4px;] tablet:text-2xl"
+          >
+            جدید ترین آموزش های تکنیس را در اینجا دنبال کنید
+          </p>
+          <div
+            class="tutorial-container mt-[55px] flex w-full flex-row items-center gap-x-4 gap-y-16 mobile:flex-wrap mobile:justify-center desktop:flex-nowrap desktop:justify-between"
+          >
+            <div
+              class="tutorial flex flex-col justify-between gap-y-8 mobile:items-center desktop:items-start"
+            >
+              <figure class="w-full">
+                <img
+                  class="w-full rounded-[40px] object-cover shadow-[_10px_20px_50px_#00000026]"
+                  src="./dist/images/tutorial.png"
+                  alt="tutorial"
+                />
+              </figure>
+              <h2 class="font-yb_r text-[22px] font-bold text-[#000F37]">
+                لورم ایپسوم متن ساختگی
+              </h2>
+              <p
+                class="font-yb_r font-bold text-[#738089] [word-spacing:4px;] desktop:text-right mobile:text-center"
+              >
+                لورم ایپسوم متن ساختگی با تولید چاپگرها و متون می باشد..
+              </p>
+              <a
+                href="#"
+                class="rounded-2xl bg-[#272D3E] px-[68px] py-3 font-yb_r font-bold text-white"
+                >مشاهده</a
+              >
+            </div>
+            <div
+              class="tutorial flex flex-col justify-between gap-y-8 mobile:items-center desktop:items-start"
+            >
+              <figure class="w-full">
+                <img
+                  class="w-full rounded-[40px] object-cover shadow-[_10px_20px_50px_#00000026]"
+                  src="./dist/images/tutorial.png"
+                  alt="tutorial"
+                />
+              </figure>
+              <h2 class="font-yb_r text-[22px] font-bold text-[#000F37]">
+                لورم ایپسوم متن ساختگی
+              </h2>
+              <p
+                class="font-yb_r font-bold text-[#738089] [word-spacing:4px;] desktop:text-right mobile:text-center"
+              >
+                لورم ایپسوم متن ساختگی با تولید چاپگرها و متون می باشد..
+              </p>
+              <a
+                href="#"
+                class="rounded-2xl bg-[#272D3E] px-[68px] py-3 font-yb_r font-bold text-white"
+                >مشاهده</a
+              >
+            </div>
+            <div
+              class="tutorial flex flex-col justify-between gap-y-8 mobile:items-center desktop:items-start"
+            >
+              <figure class="w-full">
+                <img
+                  class="w-full rounded-[40px] object-cover shadow-[_10px_20px_50px_#00000026]"
+                  src="./dist/images/tutorial.png"
+                  alt="tutorial"
+                />
+              </figure>
+              <h2 class="font-yb_r text-[22px] font-bold text-[#000F37]">
+                لورم ایپسوم متن ساختگی
+              </h2>
+              <p
+                class="font-yb_r font-bold text-[#738089] [word-spacing:4px;] desktop:text-right mobile:text-center"
+              >
+                لورم ایپسوم متن ساختگی با تولید چاپگرها و متون می باشد..
+              </p>
+              <a
+                href="#"
+                class="rounded-2xl bg-[#272D3E] px-[68px] py-3 font-yb_r font-bold text-white"
+                >مشاهده</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tutorials!  -->
+
+      <!-- Decorator -->
+      <div
+        class="decorator_3 absolute right-0 top-[4580px] -z-20 mobile:hidden tablet:block"
+      >
+        <img src="./dist/images/decorator3.png" alt="decorator" />
+      </div>
+      <!-- Decorator! -->
+
+      <!-- FAQ -->
+      <section class="faq mx-auto mobile:w-[96%] desktop:w-4/5">
+        <h2
+          class="mb-[47px] text-center font-yb_b text-[#000F37] mobile:text-[38px] desktop:text-[48px]"
+        >
+          سوالات متداول
+        </h2>
+        <div
+          id="accordionFlushExample"
+          class="font-yb_r font-bold [word-spacing:2px]"
+        >
+          <div
+            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800"
+          >
+            <h2 class="mb-0" id="flush-headingOne">
+              <button
+                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-right text-[#000F37] transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white tablet:text-lg [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                type="button"
+                data-te-collapse-init
+                data-te-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                1_ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                با استفاده از طراحان گرافیک است ؟
+                <span
+                  class="-ml-1 mr-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:ml-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="!visible border-0"
+              data-te-collapse-item
+              data-te-collapse-show
+              aria-labelledby="flush-headingOne"
+              data-te-parent="#accordionFlushExample"
+            >
+              <div
+                class="px-5 py-4 text-[#738089] [word-spacing:2px] mobile:text-sm tablet:text-base"
+              >
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی لورم ایپسوم
+                متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                سطرآنچنان که لازم است
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800"
+          >
+            <h2 class="mb-0" id="flush-headingTwo">
+              <button
+                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-right text-[#000F37] transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white tablet:text-lg [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                2_ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است
+                ؟
+                <span
+                  class="-ml-1 mr-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:ml-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="!visible hidden border-0"
+              data-te-collapse-item
+              aria-labelledby="flush-headingTwo"
+              data-te-parent="#accordionFlushExample"
+            >
+              <div
+                class="px-5 py-4 text-[#738089] [word-spacing:2px] mobile:text-sm tablet:text-base"
+              >
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی لورم ایپسوم
+                متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                سطرآنچنان که لازم است
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800"
+          >
+            <h2 class="mb-0" id="flush-headingThree">
+              <button
+                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-right text-[#000F37] transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white tablet:text-lg [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                3_ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                با استفاده از طراحان گرافیک است ؟
+                <span
+                  class="-ml-1 mr-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:ml-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="flush-headingThree"
+              data-te-parent="#accordionFlushExample"
+            >
+              <div
+                class="px-5 py-4 text-[#738089] [word-spacing:2px] mobile:text-sm tablet:text-base"
+              >
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی لورم ایپسوم
+                متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                سطرآنچنان که لازم است
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800"
+          >
+            <h2 class="mb-0" id="flush-headingFour">
+              <button
+                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-right text-[#000F37] transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white tablet:text-lg [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour"
+              >
+                4_ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است
+                ؟
+                <span
+                  class="-ml-1 mr-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:ml-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFour"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="flush-headingFour"
+              data-te-parent="#accordionFlushExample"
+            >
+              <div
+                class="px-5 py-4 text-[#738089] [word-spacing:2px] mobile:text-sm tablet:text-base"
+              >
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی لورم ایپسوم
+                متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                سطرآنچنان که لازم است
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-none border border-b-0 border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800"
+          >
+            <h2 class="mb-0" id="flush-headingFive">
+              <button
+                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-right text-[#000F37] transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white tablet:text-lg [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#flush-collapseFive"
+                aria-expanded="false"
+                aria-controls="flush-collapseFive"
+              >
+                5_ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است
+                ؟
+                <span
+                  class="-ml-1 mr-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:ml-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFive"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="flush-headingFive"
+              data-te-parent="#accordionFlushExample"
+            >
+              <div
+                class="px-5 py-4 text-[#738089] [word-spacing:2px] mobile:text-sm tablet:text-base"
+              >
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی لورم ایپسوم
+                متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                سطرآنچنان که لازم است
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ! -->
+
+      <!-- Contact Us -->
+      <section
+        class="contact_us mx-auto mt-[116px] mobile:w-[96%] mobile:rounded-2xl mobile:bg-[#272d3e] mobile:p-4 mobile:text-center tablet:p-12 desktop:h-[600px] desktop:w-4/5 desktop:bg-white desktop:bg-[url('../images/bg3.png')] desktop:bg-[length:100%_100%] desktop:bg-center desktop:bg-no-repeat desktop:pr-[50px] desktop:pt-[72px] desktop:text-right"
+      >
+        <h2 class="font-yb_b text-white mobile:text-[38px] desktop:text-[48px]">
+          تکنیس، برای همیشه همراه شماست.
+        </h2>
+        <p class="font-yb_b text-white tablet:text-[20px]">
+          با ارسال شماره تماس خود، همکاران ما سریعاً با شما تماس خواهند گرفت.
+        </p>
+        <form class="mt-[72px] h-12 mobile:w-full desktop:w-1/2" action="#">
+          <input
+            class="h-full w-1/2 rounded-lg text-right font-yb_b text-sm mobile:pr-2 tablet:pr-5"
+            type="tel"
+            id="tel"
+            placeholder="شماره تماس خود را وارد کنید"
+          />
+          <input
+            class="h-full cursor-pointer rounded-lg bg-[#527BCB] px-2 py-3 font-yb_r text-sm text-white duration-500 hover:bg-[#7ea2eb]"
+            type="submit"
+            value="درخواست مشاوره"
+          />
+        </form>
+      </section>
+      <!-- Contact Us! -->
+    </main>
+    <!-- Main! -->
+
+    <!-- Footer -->
+    <footer
+      class="relative flex w-full items-center bg-[url('../images/bg4.png')] bg-center bg-no-repeat mobile:mt-8 mobile:h-[600px] mobile:justify-between mobile:bg-cover mobile:px-4 tablet:flex-row tablet:justify-around tablet:pr-0 desktop:h-[740px] desktop:justify-center desktop:bg-[length:100%_100%] desktop:px-[92px] desktop:pt-[200px]"
+    >
+      <section class="right_side mobile:w-[30%] desktop:w-1/2">
+        <div
+          class="links flex flex-col items-start justify-between font-yb_r text-lg text-white mobile:gap-y-3 tablet:gap-y-5 desktop:gap-y-9"
+        >
+          <a href="#">صفحه اصلی</a>
+          <a href="#">اخبار و مقالات</a>
+          <a href="#">آموزش</a>
+          <a href="#">گالری</a>
+          <a href="#">سوالات متداول</a>
+          <a href="#">درباره ما</a>
+        </div>
+        <div
+          class="social-media mt-10 flex flex-row items-center justify-start gap-y-4 mobile:flex-wrap mobile:gap-x-2 tablet:gap-x-4 desktop:flex-nowrap"
+        >
+          <a href="#"
+            ><img src="./dist/svg/social-media1.svg" alt="social-media"
+          /></a>
+          <a href="#"
+            ><img src="./dist/svg/social-media2.svg" alt="social-media"
+          /></a>
+          <a href="#"
+            ><img src="./dist/svg/social-media3.svg" alt="social-media"
+          /></a>
+          <a href="#"
+            ><img src="./dist/svg/social-media4.svg" alt="social-media"
+          /></a>
+          <a href="#"
+            ><img src="./dist/svg/social-media5.svg" alt="social-media"
+          /></a>
+        </div>
+      </section>
+      <section class="left_side mobile:w-3/5 tablet:w-1/3">
+        <div class="logo"><img src="./dist/svg/logo.svg" alt="logo" /></div>
+        <p class="font-yb_r text-sm text-white mobile:mt-8 tablet:mt-16">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+          سطرآنچنان که لازم است .
+        </p>
+        <form class="mt-4 h-12 w-full" action="#">
+          <input
+            class="h-full rounded-lg pr-5 text-right font-yb_b text-sm mobile:w-full desktop:w-[65%]"
+            type="email"
+            id="email"
+            placeholder="ایمیل خود را وارد کنید"
+          />
+          <input
+            class="mt-2 h-full cursor-pointer rounded-lg bg-[#00EEFF] px-9 py-3 font-yb_r text-sm text-white duration-500 hover:bg-[#80a3eb] tablet:mr-2"
+            type="submit"
+            value="ارسال"
+          />
+        </form>
+      </section>
+      <section class="copy-right absolute bottom-2 w-[92%] text-center">
+        <p class="font-yb_r text-xl text-white">
+          تمامی حقوق این سایت <span class="text-[#FFCD1A]">محفوظ</span> است
+        </p>
+      </section>
+    </footer>
+    <!-- Footer! -->
+
+    <!-- Swiper -->
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".slider", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          // when window width is >= 320px
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          // when window width is >= 640px
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        },
+      });
+    </script>
+    <!-- Swiper! -->
+
+    <script
+      type="text/javascript"
+      src="./tw-elements/dist/js/tw-elements.umd.min.js"
+    ></script>
+  </body>
+</html>
